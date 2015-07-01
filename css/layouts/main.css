@@ -121,6 +121,10 @@ a.pure-button-primary {
     color: #AECFE5;
 }
 
+.pure-menu-list{
+	float: right;
+}
+
 
 /*
  * -- SPLASH STYLES --
