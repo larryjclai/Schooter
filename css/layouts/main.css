@@ -86,15 +86,14 @@ a.pure-button-primary {
  * -- MENU STYLES --
  * I want to customize how my .pure-menu looks at the top of the page
  */
-
 .home-menu {
+	font-size: 1.5em;
     padding: 0.5em;
     text-align: center;
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
-}
-.home-menu {
     background: #2d3e50;
 }
+
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
     border-bottom: none;
@@ -126,10 +125,9 @@ a.pure-button-primary {
 /*
  * -- SPLASH STYLES --
  * This is the blue top section that appears on the page.
- */
-
+ */ 
 .splash-container {
-    background: #1f8dd6;
+    background:balck;
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
@@ -166,6 +164,8 @@ a.pure-button-primary {
 /* This is the subheading that appears on the blue section */
 .splash-subhead {
     color: white;
+	font-size: 25px;
+	font-style: bold;
     letter-spacing: 0.05em;
     opacity: 0.8;
 }
