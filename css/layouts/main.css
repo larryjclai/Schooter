@@ -96,7 +96,7 @@ a.pure-button-primary {
     padding: 0.5em;
     text-align: center;
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
-    background: #2d3e50;
+    background:rgba(0,0,0,0.2);
 }
 
 .pure-menu.pure-menu-fixed {
@@ -117,7 +117,7 @@ a.pure-button-primary {
 }
 
 .home-menu a {
-    color: #6FBEF3;
+    color: white;
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
@@ -128,6 +128,7 @@ a.pure-button-primary {
 
 .pure-menu-list{
 	float: right;
+    widht:auto;
 }
 
 
