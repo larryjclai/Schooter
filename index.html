@@ -2,12 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="外出輕旅行，租車便宜又放心。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="外出輕旅行，租車便宜又放心。">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+        $("body").hide();
+    </script>
     <title>Schooter - Taiwan</title>
     <link rel="stylesheet" href="css/pure.css">
-    <script src="jquery-2.1.4min.js"></script>
-
+    
+<!--    <script src="main.js"></script>-->
+    <!-- Add the jquery datapicker plugin -->
+    <link rel="stylesheet" media="screen" type="text/css" href="js/datepicker/css/datepicker.css" />
+    <script type="text/javascript" src="js/datepicker/js/datepicker.js"></script>
+    
 <!--[if lte IE 8]>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
 <![endif]-->
@@ -23,7 +31,7 @@
 </head>
 <body>
 <div class="header">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+    <div class="home-menu pure-menu pure-menu-horizontal">
         <a class="pure-menu-heading" href="">Schooter</a>
         <span class="pure-menu-list">
             <li class="pure-menu-item" style="border:2px solid white"><a href="#" class="pure-menu-link">出租機車</a></li>
@@ -44,8 +52,8 @@
             <form class="pure-form search-bar">
                 <fieldset>
                     <input id="destination" type="text" placeholder="您想去哪裡？" />
-                    <input id="rent" type="date" placeholder="租車日期" />
-                    <input id="return" type="date" placeholder="還車日期" />
+                    <input class="rent_date" id="inputDate" value="11/05/2015" placeholder="租車日期"></input>
+                    <input class="return_date" id="inputDate" value="11/06/2015" placeholder="還車日期"></input>
                     <select id="guests" name="guests">
                         <option value="1">1輛機車</option>
                         <option value="2">2輛機車</option>
@@ -61,12 +69,29 @@
     
 <div class="content-wrapper">
     <div class="content">
+        
+        
         <div class="footer l-box is-center">
             Copyright © 2015 SCHOOTER All rights reserved
         </div>
 
     </div>
 </div>
-
+<script type="text/javascript">
+    $('#inputDate').DatePicker({
+        format:'m/d/Y',
+        date: $('#inputDate').val(),
+        current: $('#inputDate').val(),
+        starts: 1,
+        position: 'r',
+        onBeforeShow: function(){
+            $('#inputDate').DatePickerSetDate($('#inputDate').val(), true);
+        },
+        onChange: function(formated, dates){
+            $('#inputDate').val(formated);
+            $('#inputDate').DatePickerHide();
+        }
+    });
+</script>
 </body>
 </html>
