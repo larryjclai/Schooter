@@ -1,0 +1,31 @@
+/* navbar menu */
+.navbar-menu a,
+.navbar-brand{
+    color:white !important; 
+}
+
+
+
+/* splash */
+.splash-bg,
+.splash{
+    width: 100%;
+    margin:auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color:white;
+}
+
+.splash{
+    top: 30%; left: 0; bottom: 0; right: 0 !important;
+    line-height: 6em;
+}
+
+.splash-btn{
+    border-Radius:0px;
+    background: rgba(255,255,255, 0.3)!important;
+    border:0px;
+    color:white !important;
+}
