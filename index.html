@@ -10,7 +10,10 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-      <link href="css/customize.css" rel="stylesheet">
+    <!-- Customize the theme -->
+    <link href="css/customize.css" rel="stylesheet">
+    <!-- Datetimerangepicker jquery plugin -->
+    <link href="css/daterangepicker.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,8 +47,7 @@
             <form class="form-inline search-bar">
                 <fieldset>
                     <input class="form-control" id="destination" type="text" placeholder="您想去哪裡？" />
-                    <input class="form-control rent_date" value="11/05/2015" placeholder="租車日期"></input>
-                    <input class="form-control return_date" value="11/06/2015" placeholder="還車日期"></input>                                                   <select class="form-control" id="guests" name="guests">
+                    <input class="form-control" id="daterange" type="text" name="daterange" value="租車日期？"></input>                                         <select class="form-control" id="guests" name="guests">
                         <option value="1">1輛機車</option>
                         <option value="2">2輛機車</option>
                         <option value="3">3輛機車</option>
@@ -54,14 +56,25 @@
                     <button class="btn btn-default avtive search-button" type="submit">搜索</button>
                 </fieldset>
             </form>
-        </div>
-    </div>
-            
-            
-
+        
+        
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-2.1.4min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Daterrangepicker Jquery Plugin -->
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.js"></script>    
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('#daterange').daterangepicker({
+            "autoApply": true,
+            "startDate": "11/03/2015",
+            "endDate": "11/09/2015"}, 
+        function(start, end, label) {
+            console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+        });
+    });
+    </script>
   </body>
 </html>
