@@ -33,3 +33,16 @@
     border:0px;
     color:white !important;
 }
+
+/* footer */
+
+.footer-wrapper{
+    background:rgba(159,224,246,1);
+}
+
+.footer-content{  
+    text-align:center;
+}
+
+
+ 
