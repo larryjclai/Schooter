@@ -4,6 +4,14 @@
     color:white !important; 
 }
 
+.navbar-inverse{
+    background: black;
+}
+
+.nav-border{
+    border:solid 2px white;
+}
+
 
 
 /* splash */
@@ -29,3 +37,16 @@
     border:0px;
     color:white !important;
 }
+
+/* footer */
+
+.footer-wrapper{
+    background:white;
+}
+
+.footer-content{  
+    text-align:center;
+}
+
+
+ 

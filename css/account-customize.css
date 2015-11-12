@@ -1,0 +1,32 @@
+/* navbar menu */
+.navbar-menu a,
+.navbar-brand{
+    color:gray !important; 
+}
+
+.navbar-inverse{
+    background: white;
+}
+
+.nav-border{
+    border:2px solid gray;
+}
+
+div.container-fluid.sub-navbar-wrapper{
+    background-color:rgba(86,90,92,1) !important;
+    border:none;
+    margin-top:1%;
+}
+
+/* footer */
+
+.footer-wrapper{
+    background:white;
+}
+
+.footer-content{  
+    text-align:center;
+}
+
+
+ 

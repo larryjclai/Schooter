@@ -10,7 +10,10 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-      <link href="css/customize.css" rel="stylesheet">
+    <!-- Customize the theme -->
+    <link href="css/index-customize.css" rel="stylesheet">
+    <!-- Datetimerangepicker jquery plugin -->
+    <link href="css/daterangepicker.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,27 +29,59 @@
             <a class="navbar-brand" href="#">SCHOOTER</a>
         </div>
             <ul class="navbar-menu nav navbar-nav list-inline navbar-right">
-                <li role="navigation" style="border:2px solid white"><a href="#" class="pure-menu-link">出租機車</a></li>
-                <li role="navigation"><a href="#" class="pure-menu-link"><img src="img/nav_message.png" /> 信息</a></li>
-                <li role="navigation"><a href="#" class="pure-menu-link"><img src="img/nav_help.png"></img> 幫助</a></li>
-                <li role="navigation"><a href="account.html" class="pure-menu-link">個人信息</a></li>
+                <li class="nav-border" role="navigation"><a href="#">出租機車</a></li>
+                <li role="navigation"><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> 信息</a></li>
+                <li role="navigation"><a href="#"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> 幫助</a></li>
+                <li role="navigation"><a href="account.html">個人信息</a></li>
             </ul>
         </div>
     </nav>
-    <div class="container splash-container">
-        <span class="splash-bg">
-            <img src="img/background.jpg" class="img-responsive" alt="Responsive image">
-        <span>
+    <content class="container splash-container">
+        <img src="img/background.jpg" class="img-responsive splash-bg" alt="Responsive image">
         <div class="splash">
             <h1 class="splash-head">來場輕旅行</h1>
             <h2 class="splash-subhead">全台最大學生機車租借平台</h2>
             <p><a class="splash-btn btn btn-lg active" href="#" role="button">如何使用SCHOOTER</a></p>
+            <form class="form-inline search-bar">
+                <fieldset>
+                    <input class="form-control" id="destination" type="text" placeholder="您想去哪裡？" />
+                    <input class="form-control" id="daterange" type="text" name="daterange" value="租車日期？"></input>                                         <select class="form-control" id="guests" name="guests">
+                        <option value="1">1輛機車</option>
+                        <option value="2">2輛機車</option>
+                        <option value="3">3輛機車</option>
+                        <option value="4">4輛機車</option>
+                    </select>
+                    <button class="btn btn-default avtive search-button" type="submit">搜索</button>
+                </fieldset>
+            </form>
         </div>
-    </div>
 
+    </content>
+    <footer class="footer-wrapper navbar navbar-default navbar-fixed-bottom">
+        <div class="footer-content container">
+            <p>SCHOOTER TAIWAN x Larry & Linus © 2015</p>
+        </div>
+    </footer>
+
+        
+        
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-2.1.4min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Daterrangepicker Jquery Plugin -->
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.js"></script>    
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('#daterange').daterangepicker({
+            "autoApply": true,
+            "startDate": "11/03/2015",
+            "endDate": "11/09/2015"}, 
+        function(start, end, label) {
+            console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+        });
+    });
+    </script>
   </body>
 </html>
