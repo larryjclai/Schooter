@@ -8,6 +8,10 @@
     background: black;
 }
 
+.nav-border{
+    border:solid 2px white;
+}
+
 
 
 /* splash */
@@ -37,7 +41,7 @@
 /* footer */
 
 .footer-wrapper{
-    background:rgba(159,224,246,1);
+    background:white;
 }
 
 .footer-content{  
